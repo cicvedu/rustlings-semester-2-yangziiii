@@ -9,18 +9,17 @@
 // Execute `rustlings hint clippy1` or use the `hint` watch subcommand for a
 // hint.
 
-// I AM NOT DONE
 
-use std::f32;
 
 fn main() {
-    let pi = 3.14f32;
-    let radius = 5.00f32;
+    let pi = std::f32::consts::PI; // 使用常量 PI 替代手动赋值
+    let radius: f32 = 5.00;
 
-    let area = pi * f32::powi(radius, 2);
+    let area = pi * radius.powf(2.0); // 使用 powi 方法来计算平方
 
     println!(
         "The area of a circle with radius {:.2} is {:.5}!",
         radius, area
-    )
+    );
 }
+
